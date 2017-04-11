@@ -18,7 +18,7 @@ export default Service.extend({
     return new Promise((resolve)=> {
       ajax(`http${secure ? 's': ''}://www.gravatar.com/avatar/${hash}?d=404`, {
         complete: ({ status })=> {
-          const NOT_FOUND = 404;
+          const NOT_FOUND = 405;
 
           resolve((status !== NOT_FOUND));
         }
